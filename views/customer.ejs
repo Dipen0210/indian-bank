@@ -1,0 +1,80 @@
+<%-include("./partials/header") %> 
+<%-include("./partials/navbar") %>
+
+<div class="container-customer customer-container justify-content-center align-items-center flex-column mt-3 h-100 overflow-hidden animate__animated animate__fadeIn animate__slow ">
+  <div class="card p-2 customer-card text-white bg-secondary mb-3">
+    <h5 class="text-center">Customer Account Details</h5>
+          <ul class="list-group">
+            <li class="list-group-item">
+              <span class="fw-bold"> Account Number : </span>
+              <%=customerData.accNo%>
+            </li>
+            <li class="list-group-item">
+              <span class="fw-bold"> Account Holder Name : </span>
+
+              <%=customerData.name%>
+            </li>
+            <li class="list-group-item">
+              <span class="fw-bold"> Holder's Gender : </span>
+
+              <%=customerData.gender%>
+            </li>  
+            <li class="list-group-item">
+              <span class="fw-bold"> Holder's Birth-Date : </span>
+
+              <%=customerData.dob%>
+            </li>
+          </ul>
+          <ul class="list-group">
+          <li class="list-group-item">
+            <span class="fw-bold"> Updated on : </span>
+
+            <%=modifiedAt%>
+          </li>
+          <li class="list-group-item">
+            <span class="fw-bold"> Email ID : </span>
+
+            <%=customerData.email%>
+          </li>
+          <li class="list-group-item">
+            <span class="fw-bold">State: </span>
+
+            <%=customerData.address%>
+          </li>
+          <li class="list-group-item">
+            <span class="fw-bold"> Contact Number : </span>
+
+            <%=customerData.phone%>
+          </li>
+          <li class="list-group-item">
+            <span class="fw-bold"> Current Balance : </span
+            ><i class="fas fa-rupee-sign"></i
+            ><%= (customerData.currentBal).toLocaleString('en-IN')%>
+          </li>
+        </ul>
+
+        <div class="d-flex buttons-container align-items-center m3">
+          <!-- Credit Funds -->
+          <button type="button" class="btn btn-md btn-success marginbutton" data-bs-toggle="modal" data-bs-target="#creditAmount">
+            Credit
+          </button>
+          <!-- Debit Funds -->
+          <button type="button" class="btn btn-md btn-warning marginbutton" data-bs-toggle="modal" data-bs-target="#debitAmount">
+            Debit
+          </button>
+          <!-- Transfer Funds -->
+          <button type="button" class="btn btn-md btn-danger marginbutton" data-bs-toggle="modal" data-bs-target="#transferAmount">
+            Transfer
+          </button>
+          <!-- Transactions -->
+            <a  class="btn btn-md btn-primary marginbutton" href="<%=customerData.accNo%>/transactions">
+              View Transactions
+            </a>
+        </div>
+  </div>
+</div>
+
+<%-include("./partials/addFundsModal") %> 
+<%-include("./partials/footer") %>
+<%-include("./partials/withdrawModal") %> 
+<%-include("./partials/transferModal")%>

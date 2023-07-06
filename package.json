@@ -1,0 +1,27 @@
+{
+  "name": "banking-system",
+  "version": "1.0.0",
+  "description": "This is a basic banking system application wherein money can be added, withdrawn as well as transferred to and from customers. A ledger is maintained for each of the customers. ![image](https://user-images.githubusercontent.com/47312972/155887075-d6b1079c-8a12-4160-ac5f-213071193069.png) ![image](https://user-images.githubusercontent.com/47312972/155887086-71459ba5-f52f-487e-a474-9afb956d0ff6.png) ![image](https://user-images.githubusercontent.com/47312972/155887094-e39f4f11-8586-4a4c-bc4b-75227de082a6.png)",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "animate.css": "^4.1.1",
+    "axios": "^0.21.1",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.18.2",
+    "json": "^11.0.0",
+    "moment": "^2.29.1",
+    "moment-timezone": "^0.5.43",
+    "mongodb": "^5.6.0",
+    "mongoose": "^5.13.5",
+    "uuid": "^8.3.2",
+    "wow.js": "^1.2.2"
+  }
+}

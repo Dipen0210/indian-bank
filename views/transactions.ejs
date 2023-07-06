@@ -1,0 +1,73 @@
+<%-include("./partials/header") %> 
+<%-include("./partials/navbar") %> 
+<% const transactions = customer.transactions%>
+
+<div class=" home-container container mt-4 animate__animated animate__fadeIn animate__slow ">
+  <% if (transactions.length>0) { %>
+  <div class="row bg-light pt-2 pb-2 mt-4">
+    <h3 class="text-center">
+      <span class=""> Transactions : </span> <%= customer.name%>
+    </h3>
+  </div>
+  <div class="row mt-2">
+    <div class="col">
+      <table class="table table-light table-bordered border-dark mt-2">
+        <thead class="text-center fs-6">
+          <tr>
+            <th>No.</th>
+            <th>Date</th>
+            <th>From</th>
+            <th>To</th>
+            <th>Debit <span><i class="fas fa-rupee-sign"></i></span></th>
+            <th>Credit <span><i class="fas fa-rupee-sign"></i></span></th>
+            <th class="bg-info bg-gradient">Current Balance <span><i class="fas fa-rupee-sign"></i></span></th>
+          </tr>
+        </thead>
+
+        <tbody class="text-center fs-6">
+          <% transactions.slice().reverse().forEach((transaction,index)=>{ const
+          tempDate=(transaction.updatedAt).toString(); const
+          updatedAt=tempDate.substring(0,tempDate.indexOf('GMT')); %>
+
+          <tr>
+            <td class="fw-bold"><%= index+1%></td>
+            <td><%=updatedAt%></td>
+
+            <td><%=transaction.transactionDetails.transferredFrom%></td>
+            <td><%=transaction.transactionDetails.transferredTo%></td>
+            <% if(transaction.transactionType==="debit"){ %>
+            <td class="text-danger fw-bold">
+              <%=(transaction.transactionDetails.amount).toLocaleString('en-IN')%>
+            </td>
+
+            <%}else{%>
+
+            <td class="fw-bold">-</td>
+            <%}%> <% if(transaction.transactionType==="credit"){ %>
+            <td class="text-success fw-bold">
+              
+              <%=(transaction.transactionDetails.amount).toLocaleString('en-IN')%>
+            </td>
+
+            <%}else{%>
+
+            <td class="fw-bold">-</td>
+            <%}%>
+            <td class="fw-bold bg-warning bg-gradient">
+              <%=(transaction.transactionDetails.balance).toLocaleString('en-IN')%>
+            </td>
+          </tr>
+
+          <% })%>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <% }else{ %>
+  <div class="row">
+    <h1 class="text-center">There are no transactions at the moment!</h1>
+  </div>
+  <%}%>
+</div>
+
+<%-include("./partials/footer") %>
