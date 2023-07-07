@@ -5,7 +5,7 @@ exports.FundTransferControl = (req, res) => {
   let { amount } = req.body;
 
   amount = Math.abs(Number(amount.trim()));
-  console.log(req.body);
+  // console.log(req.body);
 
   const sender = req.params.id;
   const receiver = req.body.transferTo;

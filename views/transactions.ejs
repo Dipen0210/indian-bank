@@ -11,16 +11,15 @@
   </div>
   <div class="row mt-2">
     <div class="col">
-      <table class="table table-light table-bordered border-dark mt-2">
+      <table class="table">
         <thead class="text-center fs-6">
           <tr>
-            <th>No.</th>
-            <th>Date</th>
-            <th>From</th>
-            <th>To</th>
-            <th>Debit <span><i class="fas fa-rupee-sign"></i></span></th>
-            <th>Credit <span><i class="fas fa-rupee-sign"></i></span></th>
-            <th class="bg-info bg-gradient">Current Balance <span><i class="fas fa-rupee-sign"></i></span></th>
+            <th class="bg-secondary bg-gradient">No.</th>
+            <th class="bg-secondary bg-gradient">Date</th>
+            <th class="bg-secondary bg-gradient">From</th>
+            <th class="bg-secondary bg-gradient">To</th>
+            <th class="bg-secondary bg-gradient">Transactions <span><i class="fas fa-rupee-sign"></i></span></th>
+            <th class="bg-secondary bg-gradient">Current Balance <span><i class="fas fa-rupee-sign"></i></span></th>
           </tr>
         </thead>
 
@@ -42,7 +41,6 @@
 
             <%}else{%>
 
-            <td class="fw-bold">-</td>
             <%}%> <% if(transaction.transactionType==="credit"){ %>
             <td class="text-success fw-bold">
               
@@ -51,9 +49,8 @@
 
             <%}else{%>
 
-            <td class="fw-bold">-</td>
             <%}%>
-            <td class="fw-bold bg-warning bg-gradient">
+            <td class="fw-bold bg-info bg-gradient">
               <%=(transaction.transactionDetails.balance).toLocaleString('en-IN')%>
             </td>
           </tr>
