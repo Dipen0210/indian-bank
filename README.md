@@ -1,4 +1,4 @@
-# Indian-Bank - A Basic banking Website
+# The Spark Foundation Indian-Bank - A Basic banking Website
 
 A basic banking website with features such as credit, debit, and money transfer between customers. Additionally, the website allowed users to view their transaction history.
 
