@@ -1,13 +1,61 @@
-# Bank - A banking Website
+# DonateBank – Secure Donation Banking Platform for indian organizations
 
-A basic banking website with features such as credit, debit, and money transfer between customers. Additionally, the website allowed users to view their transaction history.
+DonateBank is a secure and responsive web-based donation banking application designed to facilitate digital contributions for charitable foundations. The platform enables users to credit, debit, and transfer funds while maintaining transparent transaction records and reliable backend processing.
 
-Here are the technologies I utilized to build this website:
+The system is built with a scalable backend architecture and optimized APIs to ensure efficient transaction handling, high availability, and a smooth user experience.
 
-Frontend: HTML5, CSS3, JavaScript
-Backend: NodeJS, ExpressJS
-Database: MongoDB Atlas
-Hosting & Web server : AWS EC2 instance, PM2 service, Nginx
+---
+
+## 🚀 Features
+
+- Secure user registration and authentication
+- Donation credit and debit transactions
+- Fund transfers between users
+- Real-time transaction history tracking
+- Responsive frontend for cross-device compatibility
+- Scalable backend with optimized API performance
+- High availability deployment with reverse proxy and process management
+
+---
+
+## 🛠 Tech Stack
+
+### Frontend
+- HTML5  
+- CSS3  
+- JavaScript  
+
+### Backend
+- Node.js  
+- Express.js  
+
+### Database
+- MongoDB Atlas  
+
+### Hosting & Infrastructure
+- AWS EC2  
+- Nginx (Reverse Proxy)  
+- PM2 (Process Manager)  
+
+---
+
+## ⚙️ System Architecture
+
+- RESTful APIs handle transaction processing and user operations  
+- MongoDB Atlas ensures reliable and scalable data storage  
+- PM2 manages application processes and enables automatic restarts  
+- Nginx acts as a reverse proxy for improved performance and security  
+
+---
+
+## 📌 Future Enhancements
+
+- Payment gateway integration
+- Role-based access control
+- Analytics dashboard for donation insights
+- Email notifications for transaction confirmations
+
+---
 
 <img width="1456" height="683" alt="Screenshot 2025-12-30 at 8 07 58 PM" src="https://github.com/user-attachments/assets/feaf4aa3-8e5c-49eb-9a7a-f98fe834280e" />
 <img width="1470" height="681" alt="Screenshot 2025-12-30 at 8 08 47 PM" src="https://github.com/user-attachments/assets/4b18d0d6-1f1c-41ab-a0f9-dda5659e0d19" />
