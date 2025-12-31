@@ -19,5 +19,3 @@ Hosting & Web server : AWS EC2 instance, PM2 service, Nginx
 <img width="1470" height="682" alt="Screenshot 2025-12-30 at 8 06 47 PM" src="https://github.com/user-attachments/assets/5a4a727f-7a23-424f-a498-9094b82eb739" />
 <img width="1470" height="686" alt="Screenshot 2025-12-30 at 8 07 18 PM" src="https://github.com/user-attachments/assets/6b8e643c-87b3-4358-8707-f782f200a75c" />
 <img width="1470" height="679" alt="Screenshot 2025-12-30 at 8 07 37 PM" src="https://github.com/user-attachments/assets/78d1afb7-40d7-42fd-b6b7-94e482409247" />
-
-website link : http://52.66.161.239/
